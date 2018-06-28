@@ -5,7 +5,7 @@
                 <div class="col-md-3">
                     <div class="site_logo center-block">
                         <a href="/">
-                            <img :alt="siteInfo.siteName" src="//codecloud.cdn.speedyrails.net/sites/5b2960236e6f647f54020000/image/jpeg/1530206460000/cropped-Fox-Run-Header-Logo.jpg//codecloud.cdn.speedyrails.net/sites/5b2960236e6f647f54020000/image/jpeg/1530206460000/cropped-Fox-Run-Header-Logo.jpg">
+                            <img :alt="siteInfo.siteName" src="//codecloud.cdn.speedyrails.net/sites/5b2960236e6f647f54020000/image/jpeg/1530206460000/cropped-Fox-Run-Header-Logo.jpg">
                         </a>
                     </div>
                     <div @click="showMenu = !showMenu" :class="{ open: showMenu }" id="menu-icon">
