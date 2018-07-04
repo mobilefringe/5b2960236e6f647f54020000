@@ -144,7 +144,6 @@
                         this.pageBanner = temp_repo.images[0];
                     }
 
-                    console.log("category", this.category)
                     if(this.category == "dining"){
                       this.selectedCat = "Restaurant";
                        this.filteredByCategory("Dine");
