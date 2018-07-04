@@ -125,6 +125,7 @@
         Vue.component('v-select', VueSelect.VueSelect);
         return Vue.component("stores-component", {
             template: template, // the variable template will be injected
+            props: ['category'],
             data: function() {
                 return {
                     dataLoaded: false,
