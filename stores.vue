@@ -144,8 +144,16 @@
                         this.pageBanner = temp_repo.images[0];
                     }
 
-                    this.allStores;
-                    this.sortByStores = true;
+                    console.log("category", this.category)
+                    if(this.category == "dining"){
+                       this.selectedCat = "Dine";
+                       this.filteredByCategory(this.selectedCat);
+                    } else {
+                        // this.filteredStores = this.allStores;
+                        this.allStores;
+                        this.sortByStores = true;
+                    }
+                    
                     this.dataLoaded = true;
                 });
             },
