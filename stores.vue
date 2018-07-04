@@ -243,6 +243,7 @@
                         this.sortByStores = false;
                         var find = this.findCategoryById;
                         var filtered = _.filter(this.processedStores, function(o) {return _.indexOf(o.categories, _.toNumber(category_id)) > -1; });
+                        console.log(filtered);
                         _.forEach(filtered, function(value, i) {
                             value.currentCategory = find(category_id).name;
                         });
