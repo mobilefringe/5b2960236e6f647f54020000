@@ -231,7 +231,7 @@
                     if(cat_id == "Select a Category" || cat_id == "All" || cat_id == null || cat_id == undefined){
                         category_id = "All";
                     } else if( cat_id === "Dine") {
-                        category_id = "Dine";
+                        category_id = "Restaurant";
                     } else {
                         category_id = this.findCategoryByName(cat_id).id;
                     }
