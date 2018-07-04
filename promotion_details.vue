@@ -11,7 +11,7 @@
                 <div class="main_container margin_30">
                     <div class="details_row">
                         <div class="details_col_3 hidden_phone">
-                            <img class="img_max" src="//codecloud.cdn.speedyrails.net/sites/5b2960236e6f647f54020000/image/jpeg/1530645302000/side_banner2.jpg" alt="" />    
+                            <img class="img_max" src="//codecloud.cdn.speedyrails.net/sites/5b2960236e6f647f54020000/image/jpeg/1527708236000/Casas Adobes - 58.jpg" alt="" />    
                         </div>
                         <div class="details_col_9" v-if="currentPromo">
                             <router-link to="/promotions-and-events">
