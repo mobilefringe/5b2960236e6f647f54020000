@@ -146,7 +146,7 @@
 
                     console.log("category", this.category)
                     if(this.category == "dining"){
-                       this.selectedCat = "Dine";
+                    //   this.selectedCat = "Dine";
                        this.filteredByCategory(this.selectedCat);
                     } else {
                         // this.filteredStores = this.allStores;
@@ -232,8 +232,7 @@
                         category_id = "All";
                     } else if( cat_id === "Dine") {
                         category_id = "Dine";
-                    }
-                    else {
+                    } else {
                         category_id = this.findCategoryByName(cat_id).id;
                     }
                     
