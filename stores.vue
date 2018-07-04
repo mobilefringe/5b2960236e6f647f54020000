@@ -147,7 +147,7 @@
                     console.log("category", this.category)
                     if(this.category == "dining"){
                     //   this.selectedCat = "Dine";
-                       this.filteredByCategory(this.selectedCat);
+                       this.filteredByCategory("Dine");
                     } else {
                         // this.filteredStores = this.allStores;
                         this.allStores;
