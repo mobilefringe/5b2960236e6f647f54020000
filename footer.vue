@@ -113,7 +113,7 @@
             methods: {
                 loadData: async function() {
                     try {
-                        let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', {url: "https://twinpines.mallmaverick.com/api/v4/twinpines/social.json"})]);
+                        let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', {url: "https://foxrunsquare.mallmaverick.com/api/v4/foxrun/social.json"})]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
