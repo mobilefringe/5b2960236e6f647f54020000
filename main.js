@@ -139,11 +139,11 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                     //     url: "https://twitter.com",
                     //     iconClass: "fab fa-twitter"
                     // },
-                    // {
-                    //     name: "Instagram",
-                    //     url: "https://www.instagram.com",
-                    //     iconClass: "fab fa-instagram"
-                    // },
+                    {
+                        name: "Instagram",
+                        url: "https://www.instagram.com/foxrunsquare",
+                        iconClass: "fab fa-instagram"
+                    },
                     // {
                     //     name: "SnapChat",
                     //     url: "",
