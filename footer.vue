@@ -15,18 +15,19 @@
                         <p>
                             Saturday:<br/>
                             <span v-for="hour in saturdayHours">
-                                {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    
+                                <span v-if="!hour.is_closed">
+                                    {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}
+                                </span>
+                                <span v-else>Closed</span>  
                             </span>
                         </p>
                         <p>
                             Sunday:<br/>  
                             <span v-for="hour in sundayHours">
                                 <span v-if="!hour.is_closed">
-                                    {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    
+                                    {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}
                                 </span>
-                                <span v-else>
-                                    Closed
-                                </span>
+                                <span v-else>Closed</span>
                             </span>
                         </p>
                     </div>
