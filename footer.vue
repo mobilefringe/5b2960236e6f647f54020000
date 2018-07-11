@@ -9,7 +9,10 @@
                         <p>
                             Monday to Friday: <br/>
                             <span v-for="hour in weekdayHours">
-                                {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    
+                                <span v-if="!hour.is_closed">
+                                    {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}
+                                </span>
+                                <span v-else>Closed</span>  
                             </span>
                         </p>
                         <p>
