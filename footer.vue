@@ -101,6 +101,7 @@
                     return _.filter(this.getPropertyHours, function(o) { return o.day_of_week == 6 });
                 },
                 sundayHours() {
+                    console.log(this.getPropertyHours)
                     return _.filter(this.getPropertyHours, function(o) { return o.day_of_week == 0 });
                 },
                 copyright_year() {
