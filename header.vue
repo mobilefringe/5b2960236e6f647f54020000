@@ -4,7 +4,7 @@
             <div class="row logo_container">
                 <div class="col-md-3">
                     <div class="site_logo center-block">
-                        <router-link href="/">
+                        <router-link to="/">
                             <img :alt="siteInfo.siteName" src="//codecloud.cdn.speedyrails.net/sites/5b2960236e6f647f54020000/image/png/1530220125000/foxrunlogo-white-02.png">
                         </router-link>
                     </div>
@@ -41,7 +41,7 @@
 						</ul>
 					</nav>
 					<div class="nav_container visible_phone">
-					    <transition name="custom-classes-transition" enter-active-class="animated slideInDown" leave-active-class="animated slideOutUp">
+					    <transition name="custom-classes-transition" enter-active-class="animated slideInRight" leave-active-class="animated slideOutRight">
     					    <nav id="mobile_nav" v-show="showMenu" class="">
     					        <ul>
     					            <li v-for="(item,key) in menu_items" class="menu_item">
