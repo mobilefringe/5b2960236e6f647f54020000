@@ -919,7 +919,8 @@ footer {
         display: block;
     }
     .site_logo {
-        width: 200px;
+        width: 240px
+        padding-top:28px;
     }
     #primary_nav {
         display: none;
