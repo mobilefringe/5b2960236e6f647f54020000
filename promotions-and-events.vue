@@ -130,7 +130,7 @@
             },
             created (){
                 this.loadData().then(response => {
-                    var temp_repo = this.findRepoByName('Promos & Events Banner');
+                    var temp_repo = this.findRepoByName('Promos & Events');
                     if(temp_repo) {
                         this.pageBanner = temp_repo.images[0];
                     }
