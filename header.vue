@@ -18,6 +18,7 @@
                 <div class="col-md-9">
                     <div class="header_social_container hidden-sm hidden-xs">
                         <div class="header_social">
+                            <!-- DYAMIC SOCIAL MEDIA -->
                             <!--<span class="social_icon" v-for="item in social_media">-->
                             <!--    <a :href="item.url" target="_blank">-->
                             <!--        <div>-->
@@ -26,6 +27,8 @@
                             <!--        </div>-->
                             <!--    </a>-->
                             <!--</span>-->
+                            <!-- STATIC SOCIAL MEDIA -->
+                            <img src="//codecloud.cdn.speedyrails.net/sites/5b2960236e6f647f54020000/image/png/1531763590000/insta-1.png" class="" alt="">
                             <img src="//codecloud.cdn.speedyrails.net/sites/5b2960236e6f647f54020000/image/png/1531763585000/insta-hover.png" class="" alt="">
                         </div>
                     </div>
@@ -173,6 +176,11 @@
                         this.search = ""
                     });
                     this.$router.push("/stores/" + option.slug);
+                },
+                methods: {
+                    mouseOver: function(){
+                        this.active = !this.active;   
+                    }
                 }
             },
             beforeDestroy: function() {
