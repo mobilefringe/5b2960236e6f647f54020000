@@ -18,14 +18,15 @@
                 <div class="col-md-9">
                     <div class="header_social_container hidden-sm hidden-xs">
                         <div class="header_social">
-                            <span class="social_icon" v-for="item in social_media">
-                                <a :href="item.url" target="_blank">
-                                    <div>
-                                        <p class="accessibility">{{item.name}}</p>
-                                        <i :class="item.iconClass" aria-hidden="true"></i>
-                                    </div>
-                                </a>
-                            </span>
+                            <!--<span class="social_icon" v-for="item in social_media">-->
+                            <!--    <a :href="item.url" target="_blank">-->
+                            <!--        <div>-->
+                            <!--            <p class="accessibility">{{item.name}}</p>-->
+                            <!--            <i :class="item.iconClass" aria-hidden="true"></i>-->
+                            <!--        </div>-->
+                            <!--    </a>-->
+                            <!--</span>-->
+                            <img src="//codecloud.cdn.speedyrails.net/sites/5b2960236e6f647f54020000/image/png/1531763585000/insta-hover.png" class="" alt="">
                         </div>
                     </div>
                     <nav id="primary_nav">
