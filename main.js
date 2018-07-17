@@ -54,7 +54,13 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
     /* initialize router */
     const router = new VueRouter({
         mode: 'history',
-        routes: appRoutes
+        routes: appRoutes,
+        scrollBehavior(to, from, savedPosition) {
+            return {
+                x: 0,
+                y: 0
+            }
+        }
     });
 
     /* initialize i18n */
