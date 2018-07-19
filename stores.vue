@@ -27,11 +27,11 @@
                                 <v-select v-model="selectedCat" :options="dropDownCats" :searchable="false" :on-change="filteredByCategory" class="category-select" :placeholder="$t('stores_page.sort_by_cats')" id="selectByCat"></v-select>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row center">
                             <div class="col-md-12">
-                                <span class="pull-right"><span class="promo_exist"><i class="fas fa-tag"></i></span> Promotion</span>  
-                                <span class="pull-right"><span class="new_store"><i class="fas fa-star"></i></span> New Store </span>
-                                <span class="pull-right"><span class="coming_soon_store"><i class="far fa-clock"></i></span> Coming Soon Store</span>
+                                <span class="legend"><span class="promo_exist"><i class="fas fa-tag"></i></span> Promotion</span>  
+                                <span class="legend"><span class="new_store"><i class="fas fa-star"></i></span> New Store </span>
+                                <span class="legend"><span class="coming_soon_store"><i class="far fa-clock"></i></span> Coming Soon Store</span>
                             </div>
                         </div>
                         <div class="row" v-if="sortByStores">
