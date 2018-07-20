@@ -47,7 +47,7 @@
                     <div class="insta-feed-container">
                         <div class="insta-feed-image " v-for="(item, index) in instaFeed">
                             <a :href="item.link" target="_blank">
-                                <img :src="item.images.thumbnail.url" :alt="item.id"/>
+                                <img :src="item.images.low_resolution.url" :alt="item.id"/>
                             </a>
                         </div>
                     </div> 
