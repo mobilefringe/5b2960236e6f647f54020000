@@ -24,7 +24,6 @@ require.config({
         'datastore': 'https://mmvue.codecloudapp.com/datastore',
         'vuex-router-sync': 'https://mmvue.codecloudapp.com/vuex-router-sync',
         //append a dummy query string so requireJS doesn't auto-append .js to the end of the url
-        'search-component': 'https://mmvue.codecloudapp.com/search-component.vue?noext',
         'vue-simple-spinner': 'https://cdn.jsdelivr.net/npm/vue-simple-spinner@1.2.8/dist/vue-simple-spinner.min',
         'today_hours': 'https://mmvue.codecloudapp.com/today_hours.vue?noext', 
         'search-component': 'https://mmvue.codecloudapp.com/search-component.vue?noext',
