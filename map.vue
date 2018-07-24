@@ -33,7 +33,7 @@
                                 <!--    :searchable="false" -->
                                 <!--    :label="'name'" -->
                                 <!--    :on-change="dropPin"-->
-                                <!--></v-select>-->
+                                <!-- </v-select>-->
                                 
                                 <search-component v-model="storeSearch" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect" :threshold="1">
                                     <template slot="item" scope="option">
