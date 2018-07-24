@@ -68,12 +68,13 @@
                     'storesByAlphaIndex'
                 ]),
                 allStores() {
+                    console.log(this.storesByAlphaIndex)
                     this.processedStores.map(function(store){
                         store.zoom = 1;
                     })
                     return this.processedStores;
                     
-                    console.log(this.storesByAlphaIndex)
+                    
                 },
                 getPNGurl() {
                     return "https://www.mallmaverick.com" + this.property.map_url;
