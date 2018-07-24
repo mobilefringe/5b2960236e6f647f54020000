@@ -76,7 +76,8 @@
                     'storesByAlphaIndex'
                 ]),
                 alphaStores() {
-                    console.log(this.storesByAlphaIndex)    
+                    console.log(this.storesByAlphaIndex);
+                    return this.storesByAlphaIndex
                 },
                 allStores() {
                     
