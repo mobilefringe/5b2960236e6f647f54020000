@@ -63,7 +63,8 @@
                 return {
                     dataLoaded: false,
                     pageBanner: "",
-                    pageBanner: ""
+                    suggestionAttribute: "name",
+                    storeSearch: null,
                 }
             },
             created (){
