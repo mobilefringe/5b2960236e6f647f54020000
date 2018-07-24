@@ -24,7 +24,7 @@
                             </div>
                             <div class="visible_phone">
                                 <div class="position_relative">
-                                    <search-component v-model="storeSearch" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect" :threshold="1">
+                                    <search-component v-model="storeSearch" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect" :threshold="0">
                                         <template slot="item" scope="option">
                                             <article class="media">
                                                 <p>{{ option.data.name }}</p>
