@@ -11,7 +11,7 @@
                     </div>
                 </div>
                 <div class="main_container margin_30">
-                    <div class="hidden_phone">
+                    <!--<div class="hidden_phone">-->
                         <div class="row store_nav">
                             <div class="col-md-3">
                                 <a class="store_nav_link active_store_nav" href="/stores">Directory</a>
@@ -95,25 +95,25 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="visible_phone">
-                        <div class="row margin_40">
-                            <div class="col-md-12 mobile_store_select">
-                                <v-select 
-                                    :options="storesList" 
-                                    :placeholder="'Select A Store'" 
-                                    :searchable="false" 
-                                    :label="'name'" 
-                                    :on-change="dropPin"
-                                ></v-select> 
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <mapplic-png-map ref="pngmap_ref" :height="700" :hovertip="true" :storelist="storesList" :floorlist="floorList" :bindLocationOpened="true" :svgWidth="property.map_image_width" :svgHeight="property.map_image_height" :showPin="true" tooltiplabel="View Store Details"></mapplic-png-map>
-                            </div>
-                        </div>    
-                    </div>
+                    <!--</div>-->
+                    <!--<div class="visible_phone">-->
+                    <!--    <div class="row margin_40">-->
+                    <!--        <div class="col-md-12 mobile_store_select">-->
+                    <!--            <v-select -->
+                    <!--                :options="storesList" -->
+                    <!--                :placeholder="'Select A Store'" -->
+                    <!--                :searchable="false" -->
+                    <!--                :label="'name'" -->
+                    <!--                :on-change="dropPin"-->
+                    <!--            ></v-select> -->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--    <div class="row">-->
+                    <!--        <div class="col-md-12">-->
+                    <!--            <mapplic-png-map ref="pngmap_ref" :height="700" :hovertip="true" :storelist="storesList" :floorlist="floorList" :bindLocationOpened="true" :svgWidth="property.map_image_width" :svgHeight="property.map_image_height" :showPin="true" tooltiplabel="View Store Details"></mapplic-png-map>-->
+                    <!--        </div>-->
+                    <!--    </div>    -->
+                    <!--</div>-->
                 </div>
             </div>
         </transition>
