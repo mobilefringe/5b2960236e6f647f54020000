@@ -27,13 +27,22 @@
                                 </div>
                             </div>
                             <div class="visible_phone">
-                                <v-select 
-                                    :options="allStores" 
-                                    :placeholder="'Select A Store'" 
-                                    :searchable="false" 
-                                    :label="'name'" 
-                                    :on-change="dropPin"
-                                ></v-select>
+                                <!--<v-select -->
+                                <!--    :options="allStores" -->
+                                <!--    :placeholder="'Select A Store'" -->
+                                <!--    :searchable="false" -->
+                                <!--    :label="'name'" -->
+                                <!--    :on-change="dropPin"-->
+                                <!--></v-select>-->
+                                
+                                <search-component v-model="storeSearch" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect" :threshold="1">
+                                    <template slot="item" scope="option">
+                                        <article class="media">
+                                            <p>{{ option.data.name }}</p>
+                                        </article>
+                                    </template>
+                                </search-component>
+                                <i id="store-search-icon" class="fa fa-search" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="details_col_9">
@@ -115,6 +124,13 @@
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
+                },
+                onOptionSelect(store) {
+                    this.$nextTick(function() {
+                        this.storeSearch = ""
+                    });
+                    // this.$refs.mapplic_ref.showLocation(option.svgmap_region);
+                    this.pngMapRef.showLocation(store.id);
                 },
                 dropPin(store) {
                     this.pngMapRef.showLocation(store.id);
