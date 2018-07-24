@@ -21,7 +21,7 @@
                                 
                                 <div class="store_list_container hidden-mobile" v-if="alphaStores" >
                                     <span v-for="(stores, key) in alphaStores">
-                                        <h3>{{ key }}</h3>
+                                        <p class="store_heading">{{ key }}</p>
                                         <p class="store_name" v-for="store in stores" v-on:click="dropPin(store)">{{store.name}}</p>
                                     </span>
                                     
