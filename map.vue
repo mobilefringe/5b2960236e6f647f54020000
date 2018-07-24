@@ -24,7 +24,6 @@
                                         <p class="store_heading">{{ key }}</p>
                                         <p class="store_name" v-for="store in stores" v-on:click="dropPin(store)">{{store.name}}</p>
                                     </span>
-                                    
                                 </div>
                             </div>
                             <div class="visible_phone">
