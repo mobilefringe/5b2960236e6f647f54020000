@@ -18,6 +18,14 @@
                                 <div class="store_list_container hidden-mobile" v-if="allStores">
                                     <p class="store_name" v-for="store in allStores" v-on:click="dropPin(store)">{{store.name}}</p>
                                 </div>
+                                
+                                <div class="store_list_container hidden-mobile" v-if="alphaStores" >
+                                    <span v-for="(stores, key) in alphaStores">
+                                        <h3>{{ key }}</h3>
+                                        <p class="store_name" v-for="store in stores" v-on:click="dropPin(store)">{{store.name}}</p>
+                                    </span>
+                                    
+                                </div>
                             </div>
                             <div class="visible_phone">
                                 <v-select 
@@ -67,8 +75,11 @@
                     'processedStores',
                     'storesByAlphaIndex'
                 ]),
+                alphaStores() {
+                    console.log(this.storesByAlphaIndex)    
+                },
                 allStores() {
-                    console.log(this.storesByAlphaIndex)
+                    
                     this.processedStores.map(function(store){
                         store.zoom = 1;
                     })
