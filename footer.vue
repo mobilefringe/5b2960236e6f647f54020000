@@ -47,7 +47,8 @@
                     <div class="insta-feed-container">
                         <div class="insta-feed-image " v-for="(item, index) in instaFeed">
                             <a :href="item.link" target="_blank">
-                                <img :src="item.images.low_resolution.url" :alt="item.id"/>
+                                <div class="insta-feed-background" v-bind:style="{ backgroundImage: 'url(' + item.images.standard_resolution.url + ')' }" ></div>
+                                <!--<img :src="item.images.low_resolution.url" :alt="item.id"/>-->
                             </a>
                         </div>
                     </div> 
