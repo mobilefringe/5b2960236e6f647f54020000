@@ -87,7 +87,7 @@
                                         <!-- STATIC SOCIAL MEDIA -->
                                         <span class="follow">Follow Us: </span>
                                         <a href="https://www.instagram.com/foxrunsquare" target="_blank">
-                                            <div class="instaIcon"></div>
+                                            <div class="instaIcon"><span class="visibilityhidden">Instagram</span></div>
                                         </a>
                                     </div>
                                     <div class="mobile_property_address center">
