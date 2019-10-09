@@ -122,6 +122,21 @@ hr{
     max-width: 100%;
 }
 
+//NAVIGATION
+#primary_nav ul .menu_item {
+    &:hover > .subdropdown,
+    &:focus-within > .subdropdown,
+    .subdropdown:hover,
+    .subdropdown.focus {
+        display: block;
+        z-index: 99;
+    }
+}
+
+.subdropdown a {
+    color: #fff;
+}
+
 /* *** LOADING *** */
 .loading-container {
     margin: auto;
