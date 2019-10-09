@@ -872,6 +872,11 @@ footer {
         white-space: initial !important;
     }
 }
+
+.v-select .spinner {
+    font-size: 1rem !important;
+}
+
 #selectByCat.v-select {
     .dropdown-toggle {
         border: none;    
