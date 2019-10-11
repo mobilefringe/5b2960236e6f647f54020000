@@ -125,12 +125,16 @@ hr{
 //NAVIGATION
 #primary_nav ul .menu_item {
     &:hover > .subdropdown,
-    &:focus-within > .subdropdown,
     .subdropdown:hover,
     .subdropdown.focus {
         display: block;
         z-index: 99;
     }
+}
+
+#primary_nav ul .menu_item:focus-within > .subdropdown {
+    display: block;
+    z-index: 99;
 }
 
 .subdropdown a {
