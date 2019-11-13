@@ -30,7 +30,7 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "vue-meta", "vue!vue-slick"], function (Vue, Vuex, Meta, slick) {
+    define(["Vue", "vuex", "vue!vue-slick"], function (Vue, Vuex, slick) {
         return Vue.component("home-component", {
             template: template, // the variable template will be injected
             data: function() {
@@ -46,12 +46,6 @@
                         infinite: true,
                         slidesToShow: 1,
                         speed: 1000
-                    },
-                    meta: {
-                       meta_title: "",
-                       meta_description: "",
-                       meta_keywords: "",
-                       meta_image: ""
                     }
                 }
             },
@@ -64,8 +58,7 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'getPropertyHours',
-                    'findMetaDataByPath'
+                    'getPropertyHours'
                 ]),
                 homeBanners() {
                     var banners = [];
@@ -104,18 +97,6 @@
                         console.log("Error loading data: " + e.message);    
                     }
                 }
-            },
-            metaInfo () {
-               return {
-                  title: this.meta.meta_title,
-                  meta: [
-                     { name: 'description', vmid: 'description', content: this.meta.meta_description },
-                     { name: 'keywords',  vmid: 'keywords', content: this.meta.meta_keywords },
-                     { property: 'og:title', vmid: 'og:title', content: this.meta.meta_title },
-                     { property: 'og:description', vmid: 'og:description', content: this.meta.meta_description },
-                     { property: 'og:image', vmid: 'og:image', content: this.meta.meta_image }
-                  ]
-               }
             }
         })
     })
