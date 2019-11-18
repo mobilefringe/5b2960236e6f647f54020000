@@ -58,7 +58,10 @@
             created(){
                 this.loadData().then(response => {
                     this.dataLoaded = true;  
+                    this.meta = this.findMetaDataByPath(this.$route.path);
+
                 });
+                
             },
             computed: {
                 ...Vuex.mapGetters([
