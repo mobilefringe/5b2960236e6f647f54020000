@@ -35,7 +35,7 @@
                             </a>
                         </div>
                     </div>
-                    <nav id="primary_nav">
+                    <nav id="primary_nav" role="navigation" aria-label="Main">
 						<ul>
 						    <li class="menu_item" v-for="item in menu_items" :id="item.id">
 						        <router-link v-if="!item.sub_menu" :to="item.href">{{ item.name }}</router-link>
@@ -50,7 +50,7 @@
 					</nav>
 					<div class="nav_container visible_phone">
 					    <transition name="custom-classes-transition" enter-active-class="animated slideInRight" leave-active-class="animated slideOutRight">
-    					    <nav id="mobile_nav" v-show="showMenu" class="">
+    					    <nav id="mobile_nav" v-show="showMenu" role="navigation" aria-label="Mobile">
     					        <ul>
     					            <li v-for="(item,key) in menu_items" class="menu_item">
     							        <router-link :to="item.href" v-if="item.sub_menu == undefined">{{$t(item.name)}}</router-link>
