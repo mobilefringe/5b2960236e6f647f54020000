@@ -3,38 +3,7 @@
         <section class="footer_menu main_container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-4 footer_hours">
-                    <!--<p class="footer_heading">MANAGEMENT OFFICE HOURS</p>-->
-                    <!--<img src="//codecloud.cdn.speedyrails.net/sites/5d9d6c136e6f647b88020000/image/png/1525870162000/clock.png" class="clock_icon" alt="">-->
-                    <!--<div class="footer_hours_container">-->
-                    <!--    <p>-->
-                    <!--        Monday to Friday: <br/>-->
-                    <!--        <span v-for="hour in weekdayHours">-->
-                    <!--            <span v-if="!hour.is_closed">-->
-                    <!--                {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}-->
-                    <!--            </span>-->
-                    <!--            <span v-else>Closed</span>  -->
-                    <!--        </span>-->
-                    <!--    </p>-->
-                    <!--    <p>-->
-                    <!--        Saturday:<br/>-->
-                    <!--        <span v-for="hour in saturdayHours">-->
-                    <!--            <span v-if="!hour.is_closed">-->
-                    <!--                {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}-->
-                    <!--            </span>-->
-                    <!--            <span v-else>Closed</span>  -->
-                    <!--        </span>-->
-                    <!--    </p>-->
-                    <!--    <p>-->
-                    <!--        Sunday:<br/>  -->
-                    <!--        <span v-for="hour in sundayHours">-->
-                    <!--            <span v-if="!hour.is_closed">-->
-                    <!--                {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}-->
-                    <!--            </span>-->
-                    <!--            <span v-else>Closed</span>-->
-                    <!--        </span>-->
-                    <!--    </p>-->
-                    <!--</div>-->
-                    <<p class="visuallyhidden">
+                    <p class="visuallyhidden">
                         <a :href="'https://maps.google.com/?q=' + property.name">View {{ property.name }} on Google Maps</a>.
                     </p>
                     <iframe aria-hidden="true" :title="'Google Map for ' + property.name" width="100%" height="200px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"  :src="'https://maps.google.nl/maps?q=' + getPropertyAddressMap + '&amp;hl=en&amp;ie=UTF8&amp;t=v&amp;hnear=' + getPropertyAddress + '&amp;z=16&amp;output=embed'"></iframe>
