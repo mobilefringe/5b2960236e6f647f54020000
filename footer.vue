@@ -21,7 +21,6 @@
                         <div class="insta-feed-image " v-for="(item, index) in instaFeed">
                             <a :href="item.link" target="_blank" aria-label="Go to this Instagram post.">
                                 <div class="insta-feed-background" v-bind:style="{ backgroundImage: 'url(' + item.images.standard_resolution.url + ')' }" ></div>
-                                <!--<img :src="item.images.low_resolution.url" :alt="item.id"/>-->
                             </a>
                         </div>
                     </div> 
