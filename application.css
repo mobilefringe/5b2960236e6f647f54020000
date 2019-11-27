@@ -115,6 +115,16 @@ hr{
 .accessibility {
     display: none;
 }
+.visuallyhidden {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 .visible_phone {
     display: none;
 }
