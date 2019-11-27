@@ -20,7 +20,7 @@
                         <div class="header_social">
                             <!-- DYAMIC SOCIAL MEDIA -->
                             <!--<span class="social_icon" v-for="item in social_media">-->
-                            <!--    <a :href="item.url" target="_blank">-->
+                            <!--    <a :href="item.url" target="_blank" :aria-label="'Follow us on ' + item.name">-->
                             <!--        <div>-->
                             <!--            <p class="accessibility">{{item.name}}</p>-->
                             <!--            <i :class="item.iconClass" aria-hidden="true"></i>-->
@@ -30,7 +30,7 @@
                             
                             <!-- STATIC SOCIAL MEDIA -->
                             <span class="follow">Follow Us: </span>
-                            <a href="https://www.instagram.com/foxrunsquare" target="_blank" aria-label="Go to Fox Run Square's Instagram.">
+                            <a href="https://www.instagram.com/foxrunsquare" target="_blank" aria-label="Follow us on Instagram">
                                 <div class="instaIcon"></div>
                             </a>
                         </div>
