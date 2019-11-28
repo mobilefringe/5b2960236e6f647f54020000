@@ -15,10 +15,10 @@
                         <div class="details_col_3">
                             <div class="hidden_phone">
                                 <h3 class="inside_page_title">Find Store</h3>
-                                <div class="store_list_container hidden-mobile" v-if="alphaStores" >
+                                <div class="store_list_container hidden-mobile" v-if="alphaStores" tabindex=0>
                                     <span v-for="(stores, key) in alphaStores">
                                         <p class="store_heading">{{ key }}</p>
-                                        <p class="store_name" v-for="store in stores" v-on:click="dropPin(store)">{{store.name}}</p>
+                                        <p class="store_name" v-for="store in stores" tabindex=0 v-on:focus="dropPin(store)" v-on:click="dropPin(store)">{{store.name}}</p>
                                     </span>
                                 </div>
                             </div>
