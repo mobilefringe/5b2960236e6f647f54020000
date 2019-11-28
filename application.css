@@ -1040,7 +1040,9 @@ footer {
     font-size: 1.125rem !important;
     line-height: 1.875rem !important;
 }
-
+#map #mapplic .mapplic-popup-link {
+    display: none;
+}
 
 @media(max-width: 1440px){
    .home_banner_container .banner_image {
