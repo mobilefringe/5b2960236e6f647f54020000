@@ -4,6 +4,7 @@
             <div class="row logo_container">
                 <div class="col-md-4">
                     <div class="site_logo">
+                        <h1 class="visuallyhidden">Welcome to {{ property.name }}</h1>
                         <router-link to="/">
                             <img :alt="siteInfo.siteName" src="//codecloud.cdn.speedyrails.net/sites/5d9d6c136e6f647b88020000/image/jpeg/1531764505000/foxrunlogo-white-02.jpg">
                         </router-link>
