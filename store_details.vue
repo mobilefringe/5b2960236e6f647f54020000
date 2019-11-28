@@ -42,17 +42,17 @@
                             <div class=" margin_30 store_details_desc" v-html="currentStore.rich_description"></div>
                             <div v-if="this.currentStore.promotions">
                                 <b-card no-body class="mb-1 inside_page_toggle">
-                                    <b-card-header header-tag="header" class="p-1" role="tab">
+                                    <b-card-header header-tag="header" class="p-1">
                                         <b-btn block @click="togglePromos = !togglePromos" :aria-expanded="togglePromos ? 'true' : 'false'" aria-controls="togglePromotions">
                                             Promotions
                                             <i v-if="togglePromos"  class="fa fa-minus f"></i>
                                             <i v-else  class="fa fa-plus"></i>
                                         </b-btn>
                                     </b-card-header>
-                                    <b-collapse v-for="promo in storePromotions" v-model="togglePromos" role="tabpanel" id="togglePromotions" class="accordion_body">
-                                        <b-card-body>
+                                    <b-collapse v-model="togglePromos" id="togglePromotions" class="accordion_body">
+                                        <b-card-body v-for="(promo, index) in storePromotions">
                                             <div class="row">
-                                                <div class="col-md-5" v-if="">
+                                                <div class="col-md-5">
                                                     <img :src="promo.image_url" :alt="'Promotion: ' + promo.name" />
                                                 </div>
                                                 <div class="col-md-7">
@@ -74,15 +74,15 @@
                             </div>
                             <div v-if="this.currentStore.jobs">
                                 <b-card no-body class="mb-1 inside_page_toggle">
-                                    <b-card-header header-tag="header" class="p-1" role="tab">
+                                    <b-card-header header-tag="header" class="p-1">
                                         <b-btn block @click="toggleJobs = !toggleJobs" :aria-expanded="toggleJobs ? 'true' : 'false'" aria-controls="toggleJobs">
                                             Jobs
                                             <i v-if="toggleJobs"  class="fa fa-minus f"></i>
                                             <i v-else  class="fa fa-plus"></i>
                                         </b-btn>
                                     </b-card-header>
-                                    <b-collapse v-for="job in storeJobs" v-model="toggleJobs" role="tabpanel" id="toggleJobs" class="accordion_body">
-                                        <b-card-body>
+                                    <b-collapse v-model="toggleJobs" id="toggleJobs" class="accordion_body">
+                                        <b-card-body v-for="(job, index) in storeJobs">
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <h3 class="promo_name">{{job.name}}</h3>
@@ -108,11 +108,6 @@
     </div>
 </template>
 
-<style>
-    #map #mapplic .mapplic-popup-link {
-        display: none;
-    }
-</style>
 <script>
     define(["Vue", "vuex", "moment", "vue!mapplic-png-map", "jquery", "bootstrap-vue"], function (Vue, Vuex, moment, MapplicComponent, $, BootstrapVue) {
         Vue.use(BootstrapVue);
