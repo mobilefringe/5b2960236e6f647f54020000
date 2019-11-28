@@ -750,6 +750,9 @@ footer {
     left: auto;
     border: 1px solid #000;
 } 
+.mapplic-tooltip-content {
+    overflow-y: hidden;
+}
 .mapplic-popup-link {
     padding: 6px 6px 3px 6px;
     float: left !important;
