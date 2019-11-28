@@ -16,14 +16,14 @@
                         <div class="details_col_9">
                             <!-- JOB -->
                             <b-card no-body class="mb-1 inside_page_toggle">
-                                <b-card-header header-tag="header" class="p-1" role="tab">
+                                <b-card-header header-tag="div" class="p-1" role="tab">
                                     <b-btn block @click="toggleJobs = !toggleJobs" :aria-expanded="toggleJobs ? 'true' : 'false'" aria-controls="toggleJobs">
                                         Jobs
                                         <i v-if="toggleJobs"  class="fa fa-minus f"></i>
                                         <i v-else  class="fa fa-plus"></i>
                                     </b-btn>
                                 </b-card-header>
-                                <b-collapse v-if="jobList.length >= 1" v-for="job in jobList" v-model="toggleJobs" role="tabpanel" id="toggleJobs" class="accordion_body">
+                                <b-collapse v-if="jobList.length >= 1" v-for="job in jobList" v-model="toggleJobs" id="toggleJobs" class="accordion_body">
                                     <b-card-body>
                                         <div class="row">
                                             <div class="col-md-12">
