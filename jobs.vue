@@ -16,7 +16,7 @@
                         <div class="details_col_9">
                             <!-- JOB -->
                             <b-card no-body class="mb-1 inside_page_toggle">
-                                <b-card-header header-tag="div" class="p-1" role="tab">
+                                <b-card-header header-tag="div" class="p-1">
                                     <b-btn block @click="toggleJobs = !toggleJobs" :aria-expanded="toggleJobs ? 'true' : 'false'" aria-controls="toggleJobs">
                                         Jobs
                                         <i v-if="toggleJobs"  class="fa fa-minus f"></i>
