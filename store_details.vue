@@ -108,6 +108,11 @@
     </div>
 </template>
 
+<style>
+    #map #mapplic .mapplic-popup-link {
+        display: none;
+    }
+</style>
 <script>
     define(["Vue", "vuex", "moment", "vue!mapplic-png-map", "jquery", "bootstrap-vue"], function (Vue, Vuex, moment, MapplicComponent, $, BootstrapVue) {
         Vue.use(BootstrapVue);
