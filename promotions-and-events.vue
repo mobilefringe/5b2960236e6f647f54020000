@@ -11,22 +11,22 @@
                 <div class="main_container mobile_padding margin_30">
                     <div class="details_row">
                         <div class="details_col_3 hidden_phone">
-                            <img class="img_max" src="//codecloud.cdn.speedyrails.net/sites/5d9d6c136e6f647b88020000/image/jpeg/1530645302000/side_banner2.jpg" alt="" />    
+                            <img class="img_max" src="//codecloud.cdn.speedyrails.net/sites/5d9d67a56e6f647b59010000/image/jpeg/1527708236000/Casas Adobes - 23.jpg" alt="" />    
                         </div>
                         <div class="details_col_9">
                             <!-- PROMOTIONS -->
                             <b-card no-body class="mb-1 inside_page_toggle">
-                                <b-card-header header-tag="header" class="p-1" role="tab">
+                                <b-card-header header-tag="header" class="p-1">
                                     <b-btn block @click="togglePromos = !togglePromos" :aria-expanded="togglePromos ? 'true' : 'false'" aria-controls="togglePromotions">
                                         Promotions
                                         <i v-if="togglePromos"  class="fa fa-minus f"></i>
                                         <i v-else  class="fa fa-plus"></i>
                                     </b-btn>
                                 </b-card-header>
-                                <b-collapse v-if="promoList.length >= 1" v-for="promo in promoList" v-model="togglePromos" role="tabpanel" id="togglePromotions" class="accordion_body">
-                                    <b-card-body>
+                                <b-collapse v-if="promoList.length >= 1" v-model="togglePromos" id="togglePromotions" class="accordion_body">
+                                    <b-card-body v-for="(promo, index) in promoList">
                                         <div class="row">
-                                            <div class="col-md-5" v-if="">
+                                            <div class="col-md-5">
                                                 <img :src="promo.image_url" :alt="'Promotion: ' + promo.name" class="max_img" />
                                             </div>
                                             <div class="col-md-7">
@@ -49,7 +49,7 @@
                                         <hr class="promo_separator" />
                                     </b-card-body>
                                 </b-collapse>
-                                <b-collapse v-if="promoList.length == 0" v-model="togglePromos" role="tabpanel" id="togglePromotions" class="accordion_body">
+                                <b-collapse v-if="promoList.length == 0" v-model="togglePromos" id="togglePromotions" class="accordion_body">
                                     <b-card-body>
                                         <div class="row">
                                             <div class="col-md-12">
@@ -60,19 +60,19 @@
                                     </b-card-body>
                                 </b-collapse>
                             </b-card>
-                                                        <!-- EVENTS -->
+                            <!-- EVENTS -->
                             <b-card no-body class="mb-1 inside_page_toggle">
-                                <b-card-header header-tag="header" class="p-1" role="tab">
+                                <b-card-header header-tag="header" class="p-1">
                                     <b-btn block @click="toggleEvents = !toggleEvents" :aria-expanded="toggleEvents ? 'true' : 'false'" aria-controls="toggleEvents">
                                         Events
                                         <i v-if="toggleEvents"  class="fa fa-minus f"></i>
                                         <i v-else  class="fa fa-plus"></i>
                                     </b-btn>
                                 </b-card-header>
-                                <b-collapse v-if="eventList.length >= 1" v-for="event in eventList" v-model="toggleEvents" role="tabpanel" id="toggleEvents" class="accordion_body">
-                                    <b-card-body>
+                                <b-collapse v-if="eventList.length >= 1" v-model="toggleEvents" id="toggleEvents" class="accordion_body">
+                                    <b-card-body v-for="(event, index) in eventList">
                                         <div class="row">
-                                            <div class="col-md-5" v-if="">
+                                            <div class="col-md-5">
                                                 <img :src="event.image_url" :alt="'Event: ' + event.name" class="max_img" />
                                             </div>
                                             <div class="col-md-7">
@@ -130,7 +130,7 @@
             },
             created (){
                 this.loadData().then(response => {
-                    var temp_repo = this.findRepoByName('Promos & Events');
+                    var temp_repo = this.findRepoByName('Promos & Events Banner');
                     if(temp_repo) {
                         this.pageBanner = temp_repo.images[0];
                     }
@@ -154,11 +154,11 @@
                         var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format();
                         if (today >= showOnWebDate) {
                             if (value.store != null && value.store != undefined && _.includes(value.store.image_url, 'missing')) {
-                                value.store.image_url = "//codecloud.cdn.speedyrails.net/sites/5d9d6c136e6f647b88020000/image/jpeg/1527795749000/PlaceHolder4.jpg";
+                                value.store.image_url = "//codecloud.cdn.speedyrails.net/sites/5d9d67a56e6f647b59010000/image/jpeg/1527795749000/PlaceHolder4.jpg";
                             }
                             
                             if (_.includes(value.image_url, 'missing')) {
-                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5d9d6c136e6f647b88020000/image/jpeg/1527795749000/PlaceHolder4.jpg";
+                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5d9d67a56e6f647b59010000/image/jpeg/1527795749000/PlaceHolder4.jpg";
                             }
                             
                             value.description_short = _.truncate(value.description, { 'length': 100, 'separator': ' ' });
@@ -181,11 +181,11 @@
                         var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format();
                         if (today >= showOnWebDate) {
                             if (value.store != null && value.store != undefined && _.includes(value.store.image_url, 'missing')) {
-                                value.store.image_url = "//codecloud.cdn.speedyrails.net/sites/5d9d6c136e6f647b88020000/image/jpeg/1527795749000/PlaceHolder2.jpg";
+                                value.store.image_url = "//codecloud.cdn.speedyrails.net/sites/5d9d67a56e6f647b59010000/image/jpeg/1527795749000/PlaceHolder2.jpg";
                             }
                             
                             if (_.includes(value.image_url, 'missing')) {
-                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5d9d6c136e6f647b88020000/image/jpeg/1527795749000/PlaceHolder2.jpg";
+                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5d9d67a56e6f647b59010000/image/jpeg/1527795749000/PlaceHolder2.jpg";
                             }
                             
                             value.description_short = _.truncate(value.description, { 'length': 100, 'separator': ' ' });
