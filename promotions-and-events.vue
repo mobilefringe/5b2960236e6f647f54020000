@@ -16,7 +16,7 @@
                         <div class="details_col_9">
                             <!-- PROMOTIONS -->
                             <b-card no-body class="mb-1 inside_page_toggle">
-                                <b-card-header header-tag="header" class="p-1">
+                                <b-card-header header-tag="div" class="p-1">
                                     <b-btn block @click="togglePromos = !togglePromos" :aria-expanded="togglePromos ? 'true' : 'false'" aria-controls="togglePromotions">
                                         Promotions
                                         <i v-if="togglePromos"  class="fa fa-minus f"></i>
@@ -62,7 +62,7 @@
                             </b-card>
                             <!-- EVENTS -->
                             <b-card no-body class="mb-1 inside_page_toggle">
-                                <b-card-header header-tag="header" class="p-1">
+                                <b-card-header header-tag="div" class="p-1">
                                     <b-btn block @click="toggleEvents = !toggleEvents" :aria-expanded="toggleEvents ? 'true' : 'false'" aria-controls="toggleEvents">
                                         Events
                                         <i v-if="toggleEvents"  class="fa fa-minus f"></i>
