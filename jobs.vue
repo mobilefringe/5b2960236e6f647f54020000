@@ -23,8 +23,8 @@
                                         <i v-else  class="fa fa-plus"></i>
                                     </b-btn>
                                 </b-card-header>
-                                <b-collapse v-if="jobList.length >= 1" v-for="job in jobList" v-model="toggleJobs" id="toggleJobs" class="accordion_body">
-                                    <b-card-body>
+                                <b-collapse v-if="jobList.length >= 1"  v-model="toggleJobs" id="toggleJobs" class="accordion_body">
+                                    <b-card-body v-for="(job, index) in jobList">
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <h3 class="promo_name">{{job.name}}</h3>
