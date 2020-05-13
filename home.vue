@@ -30,7 +30,7 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "vue-meta", "vue!vue-slick"], function (Vue, Vuex, Meta, slick) {
+    define(["Vue", "vuex", "vue!vue-slick"], function (Vue, Vuex, slick) {
         return Vue.component("home-component", {
             template: template, // the variable template will be injected
             head: {
