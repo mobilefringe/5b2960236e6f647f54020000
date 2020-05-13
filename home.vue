@@ -77,7 +77,7 @@
                 this.loadData().then(response => {
                     this.dataLoaded = true;  
                     this.meta = this.findMetaDataByPath(this.$route.path);
-
+                    this.$emit('updateHead')
                 });
                 
             },
