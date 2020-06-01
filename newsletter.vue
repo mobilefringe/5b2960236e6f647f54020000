@@ -22,30 +22,66 @@
                         </div>
                         <div class="details_col_9">
                             <p class="inside_page_link">Be the first to know about upcoming events and special announcements from {{ property.name }}!</p>
-                            <form class="form-horizontal" action="//mobilefringe.createsend.com/t/d/s/vhtsh/" method="post" @submit.prevent="validateBeforeSubmit">
+                     <!--       <form class="form-horizontal" action="//mobilefringe.createsend.com/t/d/s/vhtsh/" method="post" @submit.prevent="validateBeforeSubmit">-->
+                     <!--           <div class="row">-->
+                     <!--               <div class="col-sm-8" >-->
+                     <!--                   <label for="cm-name" for="name">Name</label>-->
+                     <!--                   <input v-model="form_data.name" required class="margin_20 form-control" id="name" name="cm-name" type="text" placeholder="Name">-->
+                     <!--               </div>-->
+                     <!--               <div class="col-sm-8">-->
+                     <!--                   <label for="newsletter_email">Email</label>-->
+                     <!--                   <input v-model="form_data.email" required class="margin_20 form-control" name="cm-vhtsh-vhtsh" type="email" placeholder="Email" id="newsletter_email">-->
+                     <!--               </div>-->
+                     <!--               <div class="col-sm-8">-->
+                     <!--                   <div style="margin-left: 20px">-->
+                     <!--                       <label class="checkbox" for="agree">-->
+                     <!--                           <input name="agree_newsletter" required  type="checkbox" id="agree">-->
+                     <!--                               I agree to receive communications from {{ property.name }}.-->
+                     <!--                       </label>-->
+                     <!--                   </div>-->
+            					    <!--</div>-->
+            					    <!--<div class="margin_20 clearfix"></div>-->
+                     <!--               <div class="col-xs-12">-->
+                     <!--                   <button class="animated_btn" type="submit" :disabled="formSuccess">Subscribe</button>-->
+                     <!--               </div>-->
+                     <!--           </div>-->
+                     <!--       </form> -->
+                            
+                            
+                            
+                            <!--<div><h1 color="#000"></h1><form class="js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A2D25E274BC1E4651B49B12DDAABE44B43B30C41BA099348D43D606789D4B459471C241D925F2A0191E4DACEF3F4F11E8"><div><div><label>Name </label><input aria-label="Name" id="fieldName" maxlength="200" name="cm-name"></div><div><label>Email </label><input autocomplete="Email" aria-label="Email" class="js-cm-email-input qa-input-email" id="fieldEmail" maxlength="200" name="cm-vhtsh-vhtsh" required="" type="email"></div><div><div><div><input aria-required="" id="cm-privacy-consent" name="cm-privacy-consent" required="" type="checkbox"><label for="cm-privacy-consent">I agree to receive communications from Fox Run Square.</label></div><input id="cm-privacy-consent-hidden" name="cm-privacy-consent-hidden" type="hidden" value="true"></div></div></div><button type="submit">Subscribe</button></form></div>-->
+                            
+                            
+                            <form class="form-horizontal js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A2D25E274BC1E4651B49B12DDAABE44B43B30C41BA099348D43D606789D4B459471C241D925F2A0191E4DACEF3F4F11E8" >
                                 <div class="row">
-                                    <div class="col-sm-8" >
-                                        <label for="cm-name" for="name">Name</label>
-                                        <input v-model="form_data.name" required class="margin_20 form-control" id="name" name="cm-name" type="text" placeholder="Name">
+                                    <div class="col-sm-8">
+                                        <label for="cm-name">Name </label>
+                                        <input class="margin_20 form-control" aria-label="Name" id="cm-name" maxlength="200" name="cm-name">
                                     </div>
                                     <div class="col-sm-8">
-                                        <label for="newsletter_email">Email</label>
-                                        <input v-model="form_data.email" required class="margin_20 form-control" name="cm-vhtsh-vhtsh" type="email" placeholder="Email" id="newsletter_email">
+                                        <label for="newsletter_email">Email </label>
+                                        <input autocomplete="Email" aria-label="Email" class="js-cm-email-input qa-input-email margin_20 form-control" id="newsletter_email" maxlength="200" name="cm-vhtsh-vhtsh" required="" type="email">
                                     </div>
                                     <div class="col-sm-8">
                                         <div style="margin-left: 20px">
-                                            <label class="checkbox" for="agree">
-                                                <input name="agree_newsletter" required  type="checkbox" id="agree">
-                                                    I agree to receive communications from {{ property.name }}.
+                                            
+                                                
+                                            <label class="checkbox" for="cm-privacy-consent">
+                                                <input aria-required="" id="cm-privacy-consent" name="cm-privacy-consent" required="" type="checkbox">
+                                                I agree to receive communications from Fox Run Square.
+                                                    
                                             </label>
+                                
+                                            <input id="cm-privacy-consent-hidden" name="cm-privacy-consent-hidden" type="hidden" value="true">
                                         </div>
-            					    </div>
-            					    <div class="margin_20 clearfix"></div>
+                                    </div>
+                                    <div class="margin_20 clearfix"></div>
                                     <div class="col-xs-12">
-                                        <button class="animated_btn" type="submit" :disabled="formSuccess">Subscribe</button>
+                                        <button class="animated_btn" type="submit" >Subscribe</button>
                                     </div>
                                 </div>
-                            </form> 
+                               
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -54,7 +90,7 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "jquery", "vee-validate", "json!site.json"], function(Vue, Vuex, $, VeeValidate, site) {
+    define(["Vue", "vuex", "jquery", "vee-validate", "json!site.json", "campaignMonitor"], function(Vue, Vuex, $, VeeValidate, site, campaignMonitor) {
         Vue.use(VeeValidate);
         return Vue.component("newsletter-component", {
             template: template, // the variable template will be injected
